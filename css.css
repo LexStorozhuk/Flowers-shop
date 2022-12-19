@@ -1,0 +1,272 @@
+body {
+    margin: 0px;
+    font-family: 'Send Flowers', cursive;
+}
+html {
+    margin: 0px;
+}
+p{
+    margin: 0px;
+}
+.grid-body {
+   height: 100vh;
+   display: grid;
+   grid-template-columns:540px 540px 540px;
+   grid-template-rows: 600px 600px 600px;;
+   grid-template-areas:
+   "items1 items2 items6"
+   "items4 items5 items6";
+   padding: 10px;
+   gap: 5px;
+   margin-left: 20px;
+}
+.grid-items1 {
+text-align: center;
+}
+.grid-items2 {
+text-align: center;
+grid-area: items2;
+}
+.grid-items3 {
+height: 100%;
+text-align: right;
+grid-area: items3;
+margin-top: auto;
+}
+
+.grid-items4 {
+text-align: center;
+grid-area: items4;
+}
+.grid-items5 {
+text-align: center;
+background-color: rgb(15, 235, 255);
+grid-area: items5;
+}
+.grid-items6 {
+text-align: center;
+grid-area: items6;
+
+}
+.grid-items1 img {
+width: 100%;
+height: 100%;
+}
+.grid-items2 img {
+width: 100%;
+height: 100%;
+}    
+.grid-items3 img {
+width: 100%;
+height: 100%;
+}
+.grid-items4 img {
+ width: 100%;
+height: 100%;
+}
+.grid-items5 img {
+width: 100%;
+height: 100%;
+}
+.grid-items6 img {
+    width: 100%;
+    height: 88%;
+}
+.nav-bar {
+    text-align: right;
+    width: fit-content;
+    height: 60px;
+    margin-left: auto ;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0px;
+    
+}
+.button-number {
+    background-color: white;
+    border: 0px;
+    margin-bottom: 5px;
+    padding: 0px;
+    cursor: pointer;
+    font-family: 'Send Flowers', cursive;
+    font-size: 25px;
+    margin: 0px 10px 0px 0px;
+    padding: 7px 0px 0px 0px;
+
+}
+.button-map {
+    background-color: white;
+    border: 0px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+.button-products {
+    background-color: white;
+    border: 0px;
+    cursor: pointer;
+    margin: 0px 0px 0px 0px;
+}
+.button-map img {
+    width: 36px;
+    height: 36px;
+}
+.button-products img {
+    width: 36px;
+    height: 36px;
+    
+}
+.pop {
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    width: 1640px;
+    height: 1230px;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.pop-grid {
+    width: 1640px;
+
+    height: 1230px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+   margin-left: 20px;
+
+}
+.pop-items1{
+display: flex;
+justify-content: start;
+}
+.pop-items2{
+    display: flex;
+    justify-content: start;
+}
+.pop-items3{
+    display: flex;
+justify-content: start;
+}
+.pop-items4{
+    display: flex;
+justify-content: start;
+}
+.pop-items5{
+    display: flex;
+    justify-content: start;
+}
+.pop-items6{
+    display: flex;
+    justify-content: start;
+}
+.pop-items7{
+    display: flex;
+justify-content: start;
+}
+.pop-items8{
+    display: flex;
+justify-content: start;
+}
+.pop-items9{
+    display: flex;
+justify-content: start;
+}
+.pop-items10{
+    display: flex;
+    justify-content: start;
+}
+.pop-items1-text{
+width: 45%;
+font-size: 15px;
+margin-top: 30px;
+padding-left: 10px;
+}
+.pop-items2-text{
+    width: 45%;
+    font-size: 15px;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+.pop-items3-text{
+    width: 45%;
+    font-size: 15px;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+.pop-items4-text{
+    width: 45%;
+    font-size: 15px;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+.pop-items5-text{
+    width: 45%;
+    font-size: 15px;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+.pop-items6-text{
+    width: 45%;
+    font-size: 15px;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+.pop-items7-text{
+    width: 45%;
+    font-size: 15px;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+.pop-items8-text{
+    width: 45%;
+    font-size: 15px;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+.pop-items9-text{
+    width: 45%;
+    font-size: 15px;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+.pop-items10-text{
+    width: 45%;
+    font-size: 15px;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+.pop-items1 img,
+.pop-items2 img,
+.pop-items3 img,
+.pop-items4 img,
+.pop-items5 img,
+.pop-items6 img,
+.pop-items7 img,
+.pop-items8 img,
+.pop-items9 img,
+.pop-items10 img
+{
+width: 50%;
+height: 80%;
+
+}
+.wrapper-close {
+height: 32px;
+width: 32px;
+position: absolute;
+right: -47px;
+top:-14px;
+display: flex;
+}
+.button-close {
+    width: 32px;
+    background-color: transparent;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    right: 0px;
+    top: 0px;
+}
