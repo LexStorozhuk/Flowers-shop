@@ -8,15 +8,33 @@ html {
 p{
     margin: 0px;
 }
+.main {
+    display: none;
+}
+.intro {
+    height: 100vh;
+    width: 100%;
+    cursor: pointer;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.video {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left:  0px;
+    top: 0px;
+
+}
 .grid-body {
    height: 100vh;
    display: grid;
-   grid-template-columns:540px 540px 540px;
-   grid-template-rows: 600px 600px 600px;;
+   grid-template-columns:33% 33% 33%;
+   grid-template-rows: 50% 50% 50%;
    grid-template-areas:
    "items1 items2 items6"
    "items4 items5 items6";
-   padding: 10px;
    gap: 5px;
    margin-left: 20px;
 }
@@ -122,23 +140,21 @@ height: 100%;
     width: 1640px;
     height: 1230px;
     background-color: rgb(255, 255, 255);
-    display: block;
+    display: none;
     margin-left: 20px;
     margin-top: 10px;
 }
 .pop-grid {
-    width: 1640px;
-
     height: 1230px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
     gap: 10px;
    margin-left: 20px;
 
 }
 .pop-items1{
-display: flex;
+    display: flex;
 justify-content: start;
 }
 .pop-items2{
@@ -179,62 +195,72 @@ justify-content: start;
 }
 .pop-items1-text{
 width: 45%;
+font-family: 'Sunflower', sans-serif;
 font-size: 15px;
-margin-top: 30px;
+margin-top: 0px;
 padding-left: 10px;
 }
 .pop-items2-text{
     width: 45%;
-    font-size: 15px;
-    margin-top: 30px;
+    font-family: 'Sunflower', sans-serif;;
+font-size: 15px;
+    margin-top: 0px;
     padding-left: 10px;
 }
 .pop-items3-text{
     width: 45%;
-    font-size: 15px;
-    margin-top: 30px;
+    font-family: 'Sunflower', sans-serif;
+font-size: 15px;
+    margin-top: 0px;
     padding-left: 10px;
 }
 .pop-items4-text{
     width: 45%;
-    font-size: 15px;
-    margin-top: 30px;
+    font-family: 'Sunflower', sans-serif;
+font-size: 15px;
+    margin-top: 0px;
     padding-left: 10px;
 }
 .pop-items5-text{
     width: 45%;
-    font-size: 15px;
-    margin-top: 30px;
+    font-family: 'Sunflower', sans-serif;
+font-size: 15px;
+    margin-top: 0px;
     padding-left: 10px;
 }
 .pop-items6-text{
     width: 45%;
-    font-size: 15px;
-    margin-top: 30px;
+    font-family: 'Sunflower', sans-serif;
+font-size: 15px;
+    margin-top: 0px;
     padding-left: 10px;
 }
 .pop-items7-text{
     width: 45%;
-    font-size: 15px;
-    margin-top: 30px;
+    font-family: 'Sunflower', sans-serif;
+font-size: 15px;
+    margin-top: 0px;
     padding-left: 10px;
 }
 .pop-items8-text{
     width: 45%;
-    font-size: 15px;
-    margin-top: 30px;
+    font-family: 'Sunflower', sans-serif;
+font-size: 15px;
+    margin-top: 0px;
     padding-left: 10px;
 }
 .pop-items9-text{
     width: 45%;
-    font-size: 15px;
-    margin-top: 30px;
+    font-family: 'Sunflower', sans-serif;
+font-size: 15px;
+    margin-top: 0px;
     padding-left: 10px;
 }
 .pop-items10-text{
     width: 45%;
-    font-size: 15px;
-    margin-top: 30px;
+    font-family: 'Sunflower', sans-serif;
+font-size: 15px;
+    margin-top: 0px;
     padding-left: 10px;
 }
 .pop-items1 img,
