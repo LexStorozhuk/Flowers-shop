@@ -1,5 +1,7 @@
 body {
     margin: 0px;
+    width: 100vw;
+    height: 100vh;
     font-family: 'Send Flowers', cursive;
 }
 html {
@@ -11,6 +13,70 @@ p{
 .main {
     display: none;
 }
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to { transform: rotate(360deg);}
+}
+@keyframes spin_second {
+    from {transform: rotate(360deg);}
+    to { transform: rotate(0deg);}
+}
+.paralax {
+    width: 300px;
+    height: 300px;
+    position: absolute ;
+    top: 30px;
+    right: 100px;
+    z-index: 2;
+}
+.idea_img {
+    width: 500px;
+    height: 500px;
+    position: absolute ;
+    bottom: 2px;
+    right: 0px;
+    z-index: 2;
+}
+.light_img {
+    width: 500px;
+    height: 500px;
+    position: absolute ;
+    bottom: 150px;
+    right: 0px;
+    z-index: 2;
+    opacity: 0.0;
+}
+.light_img:hover {
+
+    opacity: 0.5;
+}
+.paralax_img {
+    width: 500px;
+    height: 500px;
+    position: absolute ;
+    top: 100px;
+    left: 400px;
+    z-index: 2;
+    animation: spin 5s infinite;
+}
+.paralax_img_second {
+    width: 500px;
+    height: 500px;
+    position: absolute ;
+    top: 0px;
+    left: 20px;
+    z-index: 2;
+    animation: spin_second  5s infinite;
+}
+.paralax_img_third{
+    width: 500px;
+    height: 500px;
+    position: absolute ;
+    top: 400px;
+    left: 100px;
+    z-index: 2;
+    animation: spin 5s infinite;
+}
 .intro {
     height: 100vh;
     width: 100%;
@@ -18,11 +84,12 @@ p{
     position: absolute;
     left: 0px;
     top: 0px;
+    overflow: hidden;
 }
 .video {
-    width: 100%;
-    height: 100vh;
     position: absolute;
+    max-width: 100%;
+    max-height: auto;
     left:  0px;
     top: 0px;
 
