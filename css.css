@@ -7,11 +7,13 @@ body {
 html {
     margin: 0px;
 }
-p{
+h1{
     margin: 0px;
+    cursor: pointer;
 }
 .main {
-    display: none;
+    display: block;
+    /* overflow: hidden; */
 }
 @keyframes spin {
     from {transform: rotate(0deg);}
@@ -20,6 +22,19 @@ p{
 @keyframes spin_second {
     from {transform: rotate(360deg);}
     to { transform: rotate(0deg);}
+}
+@keyframes down_to {
+    from {transform: translateY(100%);}
+    to { transform: translateY(0%);}
+}
+@keyframes up_to {
+    from {transform: translateY(-100%);}
+    to { transform: translateY(0%);}
+}
+@keyframes number_down_to {
+    0% {transform: translateY(1000%);opacity: 0;}
+    50%{opacity: 0;}
+    100% { transform: translateY(0%);opacity: 0.2;}
 }
 .paralax {
     width: 300px;
@@ -41,8 +56,8 @@ p{
     width: 500px;
     height: 500px;
     position: absolute ;
-    bottom: 150px;
-    right: 0px;
+    bottom: 170px;
+    right: 100px;
     z-index: 2;
     opacity: 0.0;
 }
@@ -85,6 +100,7 @@ p{
     left: 0px;
     top: 0px;
     overflow: hidden;
+    display: none;
 }
 .video {
     position: absolute;
@@ -97,13 +113,19 @@ p{
 .grid-body {
    height: 100vh;
    display: grid;
-   grid-template-columns:33% 33% 33%;
-   grid-template-rows: 50% 50% 50%;
+   position: absolute;
+   grid-template-columns:20% 20% 20%;
+   grid-template-rows: 300px minmax(300px,1fr ) minmax( 300px, 1fr) minmax(300px, 1fr);
+   grid-template-rows: minmax(300px, 1fr) minmax(300px,1fr) minmax(300px,1fr);
+
+
    grid-template-areas:
-   "items1 items2 items6"
-   "items4 items5 items6";
+   "items12 items10 items6 items9 items11 "
+   "items12 items10 items6 items9 items11"
+   "items12 items10 items6 items9 items11";
    gap: 5px;
-   margin-left: 20px;
+   margin: 5px 5px 10px 5px;
+   z-index: 1;
 }
 .grid-items1 {
 text-align: center;
@@ -125,7 +147,6 @@ grid-area: items4;
 }
 .grid-items5 {
 text-align: center;
-background-color: rgb(15, 235, 255);
 grid-area: items5;
 }
 .grid-items6 {
@@ -133,6 +154,38 @@ text-align: center;
 grid-area: items6;
 
 }
+.grid-items7 {
+text-align: center;
+grid-area: items7;
+
+}
+.grid-items8 {
+    text-align: center;
+    grid-area: items8;
+    
+}
+.grid-items9 {
+    text-align: center;
+    grid-area: items9;
+    
+}
+.grid-items10 {
+    text-align: center;
+    grid-area: items10;
+
+    
+}
+.grid-items11 {
+    text-align: center;
+    grid-area: items11;
+    
+}
+.grid-items12 {
+    text-align: center;
+    grid-area: items12;
+    
+}
+
 .grid-items1 img {
 width: 100%;
 height: 100%;
@@ -155,41 +208,130 @@ height: 100%;
 }
 .grid-items6 img {
     width: 100%;
-    height: 88%;
+    height: 100%;
+    animation: up_to 5s;
 }
-.nav-bar {
+.grid-items7 img {
+    width: 100%;
+    height: 100%;
+    }
+.grid-items8 img {
+    width: 100%;
+    height:100%;
+}
+.grid-items9 img {
+    transform: rotateY(360deg);
+    width: 100%;
+    height:100%;
+    animation: down_to 5s;
+}
+.grid-items10 img {
+    width: 100%;
+    height:100%;
+    animation: down_to 5s;
+}
+.grid-items11 img {
+    width: 100%;
+    height:100.5%;
+    animation: up_to 5s;
+}
+.grid-items12 img {
+    width: 100%;
+    height:100%;
+    animation: up_to 5s;
+
+}
+.grid-items13 img {
+    width: 100%;
+    height:100%;
+    animation: up_to 5s;
+
+}
+.nav-bar_text {
+    width: 100%;
+    height: 100px;
+    /* border: solid 3px rgba(15, 15, 15, 0.57); */
     text-align: right;
-    width: fit-content;
-    height: 60px;
-    margin-left: auto ;
+    margin-top: -17%;
     display: flex;
+    justify-content:center;
     flex-direction: row;
     margin-bottom: 0px;
+    position: absolute;
+    z-index: 2;
+    font-size: 70px;
+    font-weight: 100;
+    color: rgba(59, 9, 1, 0.697);
+    /* opacity: 0.2; */
+    animation: up_to 5s;
+    cursor: pointer;
+}
+.nav-bar {
+    width: 19%;
+    height: 100px;
+    /* border: solid 3px rgba(15, 15, 15, 0.57); */
+    text-align: right;
+    margin-top: 3.2%;
+    margin-left: calc(50% - 8.5%) ;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    position: absolute;
+    z-index: 2;
+    text-align: left;
+    opacity: 1;
+    
     
 }
+.nav-bar_text:hover + .button-number {
+    opacity: 1;
+    transition: 1s;
+}
+
 .button-number {
-    background-color: white;
+    color: rgba(59, 9, 1, 0.697);
+    background-color: transparent;
     border: 0px;
     margin-bottom: 5px;
     padding: 0px;
     cursor: pointer;
     font-family: 'Send Flowers', cursive;
     font-size: 25px;
-    margin: 0px 10px 0px 0px;
     padding: 7px 0px 0px 0px;
+    opacity: 0.5;
+    animation: number_down_to 7s ;
+    /* font-family: 'Sunflower', sans-serif; */
+    font-style: italic;
 
 }
+.button-number:hover {
+    transition: 1s;
+    opacity: 1;
+    
+}
 .button-map {
-    background-color: white;
+    background-color: transparent;
     border: 0px;
     margin-bottom: 0px;
     cursor: pointer;
+    opacity: 0.3;
+    animation: number_down_to 7s ;
+}
+.button-map:hover {
+    transition: 1s;
+    opacity: 1;
 }
 .button-products {
-    background-color: white;
+    background-color: transparent;
     border: 0px;
     cursor: pointer;
     margin: 0px 0px 0px 0px;
+    opacity: 0.3;
+    animation: number_down_to 7s ;
+}
+.button-products:hover {
+    transition: 1s;
+    opacity: 1;
 }
 .button-map img {
     width: 36px;
@@ -201,24 +343,26 @@ height: 100%;
     
 }
 .pop {
-    background-color: white;
+    background-color: #ffffff;
     position: absolute;
     top: 0px;
-    width: 1640px;
+    left: 0px;
+    width: 100vw;
     height: 1230px;
-    background-color: rgb(255, 255, 255);
     display: none;
-    margin-left: 20px;
-    margin-top: 10px;
+    margin-left: 0px;
+    margin-top: 0px;
+    z-index: 3;
 }
 .pop-grid {
-    height: 1230px;
+    height: 100%;
+    width: 95%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr 1fr ;
     gap: 10px;
-   margin-left: 20px;
-
+   margin-left: 5px;
+   margin-top: 5px;
 }
 .pop-items1{
     display: flex;
@@ -261,74 +405,105 @@ justify-content: start;
     justify-content: start;
 }
 .pop-items1-text{
-width: 45%;
+width: 33%;
+height: 170px;
 font-family: 'Sunflower', sans-serif;
 font-size: 15px;
 margin-top: 0px;
 padding-left: 10px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 }
 .pop-items2-text{
-    width: 45%;
+    width: 33%;
+    height: 170px;
     font-family: 'Sunflower', sans-serif;;
 font-size: 15px;
     margin-top: 0px;
     padding-left: 10px;
 }
 .pop-items3-text{
-    width: 45%;
+    width: 33%;
+    height: 170px;
     font-family: 'Sunflower', sans-serif;
 font-size: 15px;
     margin-top: 0px;
     padding-left: 10px;
 }
 .pop-items4-text{
-    width: 45%;
+    width: 33%;
+    height: 170px;
     font-family: 'Sunflower', sans-serif;
 font-size: 15px;
     margin-top: 0px;
     padding-left: 10px;
 }
 .pop-items5-text{
-    width: 45%;
+    width: 33%;
+    height: 170px;
     font-family: 'Sunflower', sans-serif;
 font-size: 15px;
     margin-top: 0px;
     padding-left: 10px;
 }
 .pop-items6-text{
-    width: 45%;
+    width: 33%;
+    height: 170px;
     font-family: 'Sunflower', sans-serif;
 font-size: 15px;
     margin-top: 0px;
     padding-left: 10px;
 }
 .pop-items7-text{
-    width: 45%;
+    width: 33%;
+    height: 170px;
     font-family: 'Sunflower', sans-serif;
 font-size: 15px;
     margin-top: 0px;
     padding-left: 10px;
 }
 .pop-items8-text{
-    width: 45%;
+    width: 33%;
+    height: 170px;
     font-family: 'Sunflower', sans-serif;
 font-size: 15px;
     margin-top: 0px;
     padding-left: 10px;
 }
 .pop-items9-text{
-    width: 45%;
+    width: 33%;
+    height: 170px;
     font-family: 'Sunflower', sans-serif;
 font-size: 15px;
     margin-top: 0px;
     padding-left: 10px;
 }
 .pop-items10-text{
-    width: 45%;
+    width: 33%;
+    height: 170px;
     font-family: 'Sunflower', sans-serif;
 font-size: 15px;
     margin-top: 0px;
     padding-left: 10px;
+}
+.wriper_price
+{
+    width: 33%;
+    font-family: 'Sunflower', sans-serif;
+    font-size: 15px;
+    position: relative;
+ 
+}
+.price {
+    width: 170px;
+    height: 15px;
+    font-size: large;
+    text-align: left;
+    position: absolute;
+    bottom: 0px;
+    left: 70px;
+    z-index: 3;
 }
 .pop-items1 img,
 .pop-items2 img,
@@ -341,16 +516,16 @@ font-size: 15px;
 .pop-items9 img,
 .pop-items10 img
 {
-width: 50%;
-height: 80%;
-
+width: 300px;
+height: 90%;
+border-radius: 10%;
 }
 .wrapper-close {
 height: 32px;
 width: 32px;
 position: absolute;
-right: -47px;
-top:-14px;
+right: 5px;
+top:5px;
 display: flex;
 }
 .button-close {
@@ -360,6 +535,6 @@ display: flex;
     border: none;
     cursor: pointer;
     position: relative;
-    right: 0px;
+    right: 20px;
     top: 0px;
 }
