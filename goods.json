@@ -1,0 +1,80 @@
+{
+       "1": {
+        "name" : "English roses",
+        "cost" : "700",
+        "discription" : " Roses are the antidote to the odorless, tightly bound rosebuds you see at the supermarket flower stand",
+        "imeges" : "flowers/f1.jpg"
+       }
+},
+{
+    "2": {
+     "name" : "English Roses",
+     "cost" : "730",
+     "discription" : " They grow up to 8 feet tall and 3 feet wide. Hybrid teas aren’t known for being disease resistant",
+     "imeges" : "flowers/f2.jfif"
+    }
+},
+{
+    "3": {
+     "name" : "Tea Roses",
+     "cost" : "740",
+     "discription" : "Originating in China, these roses are the O.G. of today’s classic florist rose form.",
+     "imeges" : "flowers/f3.jfif"
+    }
+},
+{
+    "4": {
+     "name" : "Alyssum",
+     "cost" : "750",
+     "discription" : " Alyssum or sweet alyssum is a hardy plant that features heat and drought resistance.",
+     "imeges" : "flowers/f4.png"
+    }
+},
+{
+    "5": {
+     "name" : "Black-eyed Susan",
+     "cost" : "760",
+     "discription" : "The Black-eyed Susan is a type of coneflower that also goes by the name Rudbeckia. ",
+     "imeges" : "flowers/f5.jfif"
+    }
+},
+{
+    "6": {
+     "name" : "Chrysanthemum",
+     "cost" : "770",
+     "discription" : "Chrysanthemums originated thousands of years ago in China before being brought over to Japan.",
+     "imeges" : "flowers/f6.jpg"
+    }
+},
+{
+    "7": {
+     "name" : "Cosmos",
+     "cost" : "780",
+     "discription" : "The Cosmos is one of those perennial flowering plants that delights the eye with a simple daisy-type flower and a pleasant, wispy foliage.",
+     "imeges" : "flowers/f7.jfif"
+    }
+},
+{
+    "8": {
+     "name" : "Crocosmia",
+     "cost" : "650",
+     "discription" : "The Crocosmia is also known as the montbretia. These plants have a tendency to become invasive.",
+     "imeges" : "flowers/f8.jfif"
+    }
+},
+{
+    "9": {
+     "name" : "Dahlia",
+     "cost" : "750",
+     "discription" : " The Dahlia is a tuberous perennial flower that is native to Mexico and South America.",
+     "imeges" : "flowers/f9.jfif"
+    }
+},
+{
+    "10": {
+     "name" : "Daisy",
+     "cost" : "950",
+     "discription" : "Daisies belong to the family Bellis and are perennials. These spread and come in a variety of colors, such as white and pink, or even bicolored.",
+     "imeges" : "flowers/f10.jfif"
+    }
+}

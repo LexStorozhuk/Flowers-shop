@@ -1,509 +1,513 @@
 body {
-    margin: 0px;
-    width: 100vw;
-    height: 100vh;
-    font-family: 'Send Flowers', cursive;
+  margin: 0px;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Send Flowers", cursive;
 }
 html {
-    margin: 0px;
+  margin: 0px;
 }
-h1{
-    margin: 0px;
-    cursor: pointer;
+h1 {
+  margin: 0px;
+  cursor: pointer;
 }
 .main {
-    display: block;
-    /* overflow: hidden; */
+  display: block;
+  /* overflow: hidden; */
 }
 @keyframes spin {
-    from {transform: rotate(0deg);}
-    to { transform: rotate(360deg);}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 @keyframes spin_second {
-    from {transform: rotate(360deg);}
-    to { transform: rotate(0deg);}
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
 @keyframes down_to {
-    from {transform: translateY(100%);}
-    to { transform: translateY(0%);}
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }
 @keyframes up_to {
-    from {transform: translateY(-100%);}
-    to { transform: translateY(0%);}
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }
 @keyframes number_down_to {
-    0% {transform: translateY(1000%);opacity: 0;}
-    50%{opacity: 0;}
-    100% { transform: translateY(0%);opacity: 0.2;}
+  0% {
+    transform: translateY(1000%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 0.2;
+  }
 }
 .paralax {
-    width: 300px;
-    height: 300px;
-    position: absolute ;
-    top: 30px;
-    right: 100px;
-    z-index: 2;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 30px;
+  right: 100px;
+  z-index: 2;
 }
 .idea_img {
-    width: 500px;
-    height: 500px;
-    position: absolute ;
-    bottom: 2px;
-    right: 0px;
-    z-index: 2;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  bottom: 2px;
+  right: 0px;
+  z-index: 2;
 }
 .light_img {
-    width: 500px;
-    height: 500px;
-    position: absolute ;
-    bottom: 170px;
-    right: 100px;
-    z-index: 2;
-    opacity: 0.0;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  bottom: 80%;
+  right: 100px;
+  z-index: 2;
+  opacity: 0;
 }
 .light_img:hover {
-
-    opacity: 0.5;
+  opacity: 0.5;
 }
 .paralax_img {
-    width: 500px;
-    height: 500px;
-    position: absolute ;
-    top: 100px;
-    left: 400px;
-    z-index: 2;
-    animation: spin 5s infinite;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  z-index: 2;
+  animation: spin 5s infinite;
 }
 .paralax_img_second {
-    width: 500px;
-    height: 500px;
-    position: absolute ;
-    top: 0px;
-    left: 20px;
-    z-index: 2;
-    animation: spin_second  5s infinite;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  z-index: 2;
+  animation: spin_second 5s infinite;
 }
-.paralax_img_third{
-    width: 500px;
-    height: 500px;
-    position: absolute ;
-    top: 400px;
-    left: 100px;
-    z-index: 2;
-    animation: spin 5s infinite;
+.paralax_img_third {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 400px;
+  left: 100px;
+  z-index: 2;
+  animation: spin 5s infinite;
 }
 .intro {
-    height: 100vh;
-    width: 100%;
-    cursor: pointer;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    overflow: hidden;
-    display: none;
+  height: 100vh;
+  width: 100%;
+  cursor: pointer;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+  display: none;
 }
 .video {
-    position: absolute;
-    max-width: 100%;
-    max-height: auto;
-    left:  0px;
-    top: 0px;
-
+  position: absolute;
+  max-width: 100%;
+  max-height: auto;
+  left: 0px;
+  top: 0px;
 }
 .grid-body {
-   height: 100vh;
-   display: grid;
-   position: absolute;
-   grid-template-columns:20% 20% 20%;
-   grid-template-rows: 300px minmax(300px,1fr ) minmax( 300px, 1fr) minmax(300px, 1fr);
-   grid-template-rows: minmax(300px, 1fr) minmax(300px,1fr) minmax(300px,1fr);
+  height: 100vh;
+  display: grid;
+  position: absolute;
+  grid-template-columns: 20% 20% 20%;
+  grid-template-rows: 300px minmax(300px, 1fr) minmax(300px, 1fr) minmax(
+      300px,
+      1fr
+    );
+  grid-template-rows: minmax(300px, 1fr) minmax(300px, 1fr) minmax(300px, 1fr);
 
-
-   grid-template-areas:
-   "items12 items10 items6 items9 items11 "
-   "items12 items10 items6 items9 items11"
-   "items12 items10 items6 items9 items11";
-   gap: 5px;
-   margin: 5px 5px 10px 5px;
-   z-index: 1;
+  grid-template-areas:
+    "items12 items10 items6 items9 items11 "
+    "items12 items10 items6 items9 items11"
+    "items12 items10 items6 items9 items11";
+  gap: 5px;
+  margin: 5px 5px 10px 5px;
+  z-index: 1;
 }
 .grid-items1 {
-text-align: center;
+  text-align: center;
 }
 .grid-items2 {
-text-align: center;
-grid-area: items2;
+  text-align: center;
+  grid-area: items2;
 }
 .grid-items3 {
-height: 100%;
-text-align: right;
-grid-area: items3;
-margin-top: auto;
+  height: 100%;
+  text-align: right;
+  grid-area: items3;
+  margin-top: auto;
 }
 
 .grid-items4 {
-text-align: center;
-grid-area: items4;
+  text-align: center;
+  grid-area: items4;
 }
 .grid-items5 {
-text-align: center;
-grid-area: items5;
+  text-align: center;
+  grid-area: items5;
 }
 .grid-items6 {
-text-align: center;
-grid-area: items6;
-
+  text-align: center;
+  grid-area: items6;
 }
 .grid-items7 {
-text-align: center;
-grid-area: items7;
-
+  text-align: center;
+  grid-area: items7;
 }
 .grid-items8 {
-    text-align: center;
-    grid-area: items8;
-    
+  text-align: center;
+  grid-area: items8;
 }
 .grid-items9 {
-    text-align: center;
-    grid-area: items9;
-    
+  text-align: center;
+  grid-area: items9;
 }
 .grid-items10 {
-    text-align: center;
-    grid-area: items10;
-
-    
+  text-align: center;
+  grid-area: items10;
 }
 .grid-items11 {
-    text-align: center;
-    grid-area: items11;
-    
+  text-align: center;
+  grid-area: items11;
 }
 .grid-items12 {
-    text-align: center;
-    grid-area: items12;
-    
+  text-align: center;
+  grid-area: items12;
 }
 
 .grid-items1 img {
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .grid-items2 img {
-width: 100%;
-height: 100%;
-}    
+  width: 100%;
+  height: 100%;
+}
 .grid-items3 img {
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .grid-items4 img {
- width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .grid-items5 img {
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .grid-items6 img {
-    width: 100%;
-    height: 100%;
-    animation: up_to 5s;
+  width: 100%;
+  height: 100%;
+  animation: up_to 5s;
 }
 .grid-items7 img {
-    width: 100%;
-    height: 100%;
-    }
+  width: 100%;
+  height: 100%;
+}
 .grid-items8 img {
-    width: 100%;
-    height:100%;
+  width: 100%;
+  height: 100%;
 }
 .grid-items9 img {
-    transform: rotateY(360deg);
-    width: 100%;
-    height:100%;
-    animation: down_to 5s;
+  transform: rotateY(360deg);
+  width: 100%;
+  height: 100%;
+  animation: down_to 5s;
 }
 .grid-items10 img {
-    width: 100%;
-    height:100%;
-    animation: down_to 5s;
+  width: 100%;
+  height: 100%;
+  animation: down_to 5s;
 }
 .grid-items11 img {
-    width: 100%;
-    height:100.5%;
-    animation: up_to 5s;
+  width: 100%;
+  height: 100.5%;
+  animation: up_to 5s;
 }
 .grid-items12 img {
-    width: 100%;
-    height:100%;
-    animation: up_to 5s;
-
+  width: 100%;
+  height: 100%;
+  animation: up_to 5s;
 }
 .grid-items13 img {
-    width: 100%;
-    height:100%;
-    animation: up_to 5s;
-
+  width: 100%;
+  height: 100%;
+  animation: up_to 5s;
 }
 .nav-bar_text {
-    width: 100%;
-    height: 100px;
-    /* border: solid 3px rgba(15, 15, 15, 0.57); */
-    text-align: right;
-    margin-top: -17%;
-    display: flex;
-    justify-content:center;
-    flex-direction: row;
-    margin-bottom: 0px;
-    position: absolute;
-    z-index: 2;
-    font-size: 70px;
-    font-weight: 100;
-    color: rgba(59, 9, 1, 0.697);
-    /* opacity: 0.2; */
-    animation: up_to 5s;
-    cursor: pointer;
+  width: 100%;
+  height: 100px;
+  /* border: solid 3px rgba(15, 15, 15, 0.57); */
+  text-align: right;
+  margin-top: -17%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 0px;
+  position: absolute;
+  z-index: 2;
+  font-size: 70px;
+  font-weight: 100;
+  color: rgba(59, 9, 1, 0.697);
+  /* opacity: 0.2; */
+  animation: up_to 5s;
+  cursor: pointer;
 }
 .nav-bar {
-    width: 19%;
-    height: 100px;
-    /* border: solid 3px rgba(15, 15, 15, 0.57); */
-    text-align: right;
-    margin-top: 3.2%;
-    margin-left: calc(50% - 8.5%) ;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    position: absolute;
-    z-index: 2;
-    text-align: left;
-    opacity: 1;
-    
-    
+  width: 19%;
+  height: 100px;
+  /* border: solid 3px rgba(15, 15, 15, 0.57); */
+  text-align: right;
+  margin-top: 3.2%;
+  margin-left: calc(50% - 8.5%);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  position: absolute;
+  z-index: 2;
+  text-align: left;
+  opacity: 1;
 }
 .nav-bar_text:hover + .button-number {
-    opacity: 1;
-    transition: 1s;
+  opacity: 1;
+  transition: 1s;
 }
 
 .button-number {
-    color: rgba(59, 9, 1, 0.697);
-    background-color: transparent;
-    border: 0px;
-    margin-bottom: 5px;
-    padding: 0px;
-    cursor: pointer;
-    font-family: 'Send Flowers', cursive;
-    font-size: 25px;
-    padding: 7px 0px 0px 0px;
-    opacity: 0.5;
-    animation: number_down_to 7s ;
-    /* font-family: 'Sunflower', sans-serif; */
-    font-style: italic;
-
+  color: rgba(59, 9, 1, 0.697);
+  background-color: transparent;
+  border: 0px;
+  margin-bottom: 5px;
+  padding: 0px;
+  cursor: pointer;
+  font-family: "Send Flowers", cursive;
+  font-size: 25px;
+  padding: 7px 0px 0px 0px;
+  opacity: 0.5;
+  animation: number_down_to 7s;
+  /* font-family: 'Sunflower', sans-serif; */
+  font-style: italic;
 }
 .button-number:hover {
-    transition: 1s;
-    opacity: 1;
-    
+  transition: 1s;
+  opacity: 1;
 }
 .button-map {
-    background-color: transparent;
-    border: 0px;
-    margin-bottom: 0px;
-    cursor: pointer;
-    opacity: 0.3;
-    animation: number_down_to 7s ;
+  background-color: transparent;
+  border: 0px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  opacity: 0.3;
+  animation: number_down_to 7s;
 }
 .button-map:hover {
-    transition: 1s;
-    opacity: 1;
+  transition: 1s;
+  opacity: 1;
 }
 .button-products {
-    background-color: transparent;
-    border: 0px;
-    cursor: pointer;
-    margin: 0px 0px 0px 0px;
-    opacity: 0.3;
-    animation: number_down_to 7s ;
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+  margin: 0px 0px 0px 0px;
+  opacity: 0.3;
+  animation: number_down_to 7s;
 }
 .button-products:hover {
-    transition: 1s;
-    opacity: 1;
+  transition: 1s;
+  opacity: 1;
 }
 .button-map img {
-    width: 36px;
-    height: 36px;
+  width: 36px;
+  height: 36px;
 }
 .button-products img {
-    width: 36px;
-    height: 36px;
-    
+  width: 36px;
+  height: 36px;
 }
 .pop {
-    background-color: #ffffff;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    height: 1230px;
-    display: none;
-    margin-left: 0px;
-    margin-top: 0px;
-    z-index: 3;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 1230px;
+  display: block;
+  margin-left: 0px;
+  margin-top: 0px;
+  z-index: 3;
 }
 .pop-grid {
-    height: 100%;
-    width: 95%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr ;
-    gap: 10px;
-   margin-left: 5px;
-   margin-top: 5px;
+  height: 100%;
+  width: 95%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin-left: 5px;
+  margin-top: 5px;
 }
-.pop-items1{
-    display: flex;
-justify-content: start;
+.pop-items1 {
+  display: flex;
+  justify-content: start;
 }
-.pop-items2{
-    display: flex;
-    justify-content: start;
+.pop-items2 {
+  display: flex;
+  justify-content: start;
 }
-.pop-items3{
-    display: flex;
-justify-content: start;
+.pop-items3 {
+  display: flex;
+  justify-content: start;
 }
-.pop-items4{
-    display: flex;
-justify-content: start;
+.pop-items4 {
+  display: flex;
+  justify-content: start;
 }
-.pop-items5{
-    display: flex;
-    justify-content: start;
+.pop-items5 {
+  display: flex;
+  justify-content: start;
 }
-.pop-items6{
-    display: flex;
-    justify-content: start;
+.pop-items6 {
+  display: flex;
+  justify-content: start;
 }
-.pop-items7{
-    display: flex;
-justify-content: start;
+.pop-items7 {
+  display: flex;
+  justify-content: start;
 }
-.pop-items8{
-    display: flex;
-justify-content: start;
+.pop-items8 {
+  display: flex;
+  justify-content: start;
 }
-.pop-items9{
-    display: flex;
-justify-content: start;
+.pop-items9 {
+  display: flex;
+  justify-content: start;
 }
-.pop-items10{
-    display: flex;
-    justify-content: start;
+.pop-items10 {
+  display: flex;
+  justify-content: start;
 }
-.pop-items1-text{
-width: 33%;
-height: 170px;
-font-family: 'Sunflower', sans-serif;
-font-size: 15px;
-margin-top: 0px;
-padding-left: 10px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+.pop-items1-text {
+  width: 100%;
+  height: 80%;
+  font-family: "Sunflower", sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+  padding-left: 10px;
 }
-.pop-items2-text{
-    width: 33%;
-    height: 170px;
-    font-family: 'Sunflower', sans-serif;;
-font-size: 15px;
-    margin-top: 0px;
-    padding-left: 10px;
+.pop-items2-text {
+  width: 100%;
+  height: 80%;
+  font-family: "Sunflower", sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+  padding-left: 10px;
 }
-.pop-items3-text{
-    width: 33%;
-    height: 170px;
-    font-family: 'Sunflower', sans-serif;
-font-size: 15px;
-    margin-top: 0px;
-    padding-left: 10px;
+.pop-items3-text {
+  width: 100%;
+  height: 80%;
+  font-family: "Sunflower", sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+  padding-left: 10px;
 }
-.pop-items4-text{
-    width: 33%;
-    height: 170px;
-    font-family: 'Sunflower', sans-serif;
-font-size: 15px;
-    margin-top: 0px;
-    padding-left: 10px;
+.pop-items4-text {
+  width: 100%;
+  height: 80%;
+  font-family: "Sunflower", sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+  padding-left: 10px;
 }
-.pop-items5-text{
-    width: 33%;
-    height: 170px;
-    font-family: 'Sunflower', sans-serif;
-font-size: 15px;
-    margin-top: 0px;
-    padding-left: 10px;
+.pop-items5-text {
+  width: 100%;
+  height: 80%;
+  font-family: "Sunflower", sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+  padding-left: 10px;
 }
-.pop-items6-text{
-    width: 33%;
-    height: 170px;
-    font-family: 'Sunflower', sans-serif;
-font-size: 15px;
-    margin-top: 0px;
-    padding-left: 10px;
+.pop-items6-text {
+  width: 100%;
+  height: 80%;
+  font-family: "Sunflower", sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+  padding-left: 10px;
 }
-.pop-items7-text{
-    width: 33%;
-    height: 170px;
-    font-family: 'Sunflower', sans-serif;
-font-size: 15px;
-    margin-top: 0px;
-    padding-left: 10px;
+.pop-items7-text {
+  width: 100%;
+  height: 80%;
+  font-family: "Sunflower", sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+  padding-left: 10px;
 }
-.pop-items8-text{
-    width: 33%;
-    height: 170px;
-    font-family: 'Sunflower', sans-serif;
-font-size: 15px;
-    margin-top: 0px;
-    padding-left: 10px;
+.pop-items8-text {
+  width: 100%;
+  height: 80%;
+  font-family: "Sunflower", sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+  padding-left: 10px;
 }
-.pop-items9-text{
-    width: 33%;
-    height: 170px;
-    font-family: 'Sunflower', sans-serif;
-font-size: 15px;
-    margin-top: 0px;
-    padding-left: 10px;
+.pop-items9-text {
+  width: 100%;
+  height: 80%;
+  font-family: "Sunflower", sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+  padding-left: 10px;
 }
-.pop-items10-text{
-    width: 33%;
-    height: 170px;
-    font-family: 'Sunflower', sans-serif;
-font-size: 15px;
-    margin-top: 0px;
-    padding-left: 10px;
+.pop-items10-text {
+  width: 100%;
+  height: 80%;
+  font-family: "Sunflower", sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+  padding-left: 10px;
 }
-.wriper_price
-{
-    width: 33%;
-    font-family: 'Sunflower', sans-serif;
-    font-size: 15px;
-    position: relative;
- 
+.wriper_price {
+  width: 100%;
+  height: 90%;
+  font-family: "Sunflower", sans-serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: left;
 }
 .price {
-    width: 170px;
-    height: 15px;
-    font-size: large;
-    text-align: left;
-    position: absolute;
-    bottom: 0px;
-    left: 70px;
-    z-index: 3;
+  width: 100%;
+  height: 15px;
+  font-size: large;
+  text-align: right;
 }
 .pop-items1 img,
 .pop-items2 img,
@@ -514,27 +518,26 @@ font-size: 15px;
 .pop-items7 img,
 .pop-items8 img,
 .pop-items9 img,
-.pop-items10 img
-{
-width: 300px;
-height: 90%;
-border-radius: 10%;
+.pop-items10 img {
+  width: 300px;
+  height: 90%;
+  border-radius: 10%;
 }
 .wrapper-close {
-height: 32px;
-width: 32px;
-position: absolute;
-right: 5px;
-top:5px;
-display: flex;
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  display: flex;
 }
 .button-close {
-    width: 32px;
-    background-color: transparent;
-    height: 32px;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    right: 20px;
-    top: 0px;
+  width: 32px;
+  background-color: transparent;
+  height: 32px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  right: 20px;
+  top: 0px;
 }
