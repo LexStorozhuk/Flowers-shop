@@ -576,10 +576,8 @@ h1 {
 
   .pop-grid {
     height: 753vh;
-    width: 100%;
+    width: 102%;
     background: white;
-    border-left: solid  rgba(59, 9, 1, 0.697) 5px;
-    border-right: solid rgba(59, 9, 1, 0.697) 5px;
     display: flex;
     flex-direction: column;
     grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr;
@@ -603,6 +601,7 @@ h1 {
     margin-top: 0px;
     z-index: 3;
   }
+  
   .grid-items6 img {
     width: 100%;
     height: 100%;
@@ -610,16 +609,7 @@ h1 {
     border-left: solid  rgba(59, 9, 1, 0.697) 5px;
     border-right: solid rgba(59, 9, 1, 0.697) 5px;
   }
-  .grid-items7 img {
-    width: 100%;
-    height: 100%;
-    border-left: solid  rgba(59, 9, 1, 0.697) 5px;
-    border-right: solid rgba(59, 9, 1, 0.697) 5px;
-  }
-  .grid-items8 img {
-    width: 100%;
-    height: 100%;
-  }
+
   .grid-items9 img {
     transform: rotateY(360deg);
     width: 100%;
@@ -650,13 +640,7 @@ h1 {
     border-right: solid rgba(59, 9, 1, 0.697) 5px;
     border-bottom: solid rgba(59, 9, 1, 0.697) 5px;
   }
-  .grid-items13 img {
-    width: 100%;
-    height: 100%;
-    animation: up_to 5s;
-    border-left: solid  rgba(59, 9, 1, 0.697) 5px;
-    border-right: solid rgba(59, 9, 1, 0.697) 5px;
-  }
+
   .wrapper-close {
     height: 37px;
     width: 37px;
