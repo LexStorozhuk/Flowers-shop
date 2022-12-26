@@ -682,8 +682,8 @@ h1 {
   }
   
   .nav-bar_text {
-    width: 57%;
-    height: 90px;
+    width: 70%;
+    height: 50px;
     /* border: solid 3px rgba(15, 15, 15, 0.57); */
     color: rgba(59, 9, 1, 0.697);
     font-size: 50px;
