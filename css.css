@@ -13,7 +13,11 @@ h1 {
 }
 .main {
   display: block;
-  /* overflow: hidden; */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
 }
 @keyframes spin {
   from {
@@ -59,7 +63,6 @@ h1 {
     transform: translateY(0%);
     opacity: 0.2;
   }
-  
 }
 @keyframes navbar_left_to_right {
   0% {
@@ -70,7 +73,6 @@ h1 {
   100% {
     transform: translateX(0%);
   }
-  
 }
 @keyframes icons_right_to_left {
   0% {
@@ -81,7 +83,38 @@ h1 {
   100% {
     transform: translateX(0%);
   }
-  
+}
+@keyframes left_to_right {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(110%);
+  }
+}
+@keyframes right_to_left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes nav_bar_opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes left_to_right_text {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 .paralax {
   width: 300px;
@@ -145,7 +178,7 @@ h1 {
   position: absolute;
   left: 0px;
   top: 0px;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: none;
 }
 .video {
@@ -156,17 +189,21 @@ h1 {
   top: 0px;
 }
 .grid-body {
+  width: 100vw;
   height: 100vh;
   display: grid;
   /* position: absolute; */
-  grid-template-columns: 20% 20% 20%;
-  grid-template-rows: minmax(300px, 1fr) minmax(300px, 1fr) minmax(300px, 1fr);
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: minmax(300px, 1fr) minmax(300px, 1fr) minmax(300px, 1fr) minmax(
+      300px,
+      1fr
+    ) minmax(300px, 1fr);
   grid-template-areas:
     "items12 items10 items6 items9 items11 "
     "items12 items10 items6 items9 items11"
     "items12 items10 items6 items9 items11";
   gap: 5px;
-  margin: 5px 5px 10px 5px;
+  margin: 10px 5px 10px 0px;
   z-index: 1;
 }
 .grid-items1 {
@@ -177,7 +214,6 @@ h1 {
   grid-area: items2;
 }
 .grid-items3 {
-  height: 100%;
   text-align: right;
   grid-area: items3;
   margin-top: auto;
@@ -266,7 +302,7 @@ h1 {
 }
 .grid-items11 img {
   width: 100%;
-  height: 100.5%;
+  height: 100%;
   animation: up_to 5s;
 }
 .grid-items12 img {
@@ -280,35 +316,42 @@ h1 {
   animation: up_to 5s;
 }
 .nav-bar_text {
-  width: 100%;
-  height: 100px;
+  width: 19%;
+  min-width: 365px;
+  height: 50px;
+  color: rgba(255, 255, 255, 0.697);
   /* border: solid 3px rgba(15, 15, 15, 0.57); */
   display: flex;
   justify-content: center;
   flex-direction: row;
-  margin-top: -15px;
+  margin-top: 15px;
+  margin-top: 1%;
+  margin-left: calc(50% - 8.5%);
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   font-size: 70px;
   font-weight: 100px;
-  color: rgba(59, 9, 1, 0.697);
   animation: up_to 5s;
   cursor: pointer;
 }
 .nav-bar {
+  background: rgba(59, 9, 1, 0.697);
+  min-width: 365px;
   width: 19%;
-  height: 100px;
+  height: 150px;
   /* border: solid 3px rgba(15, 15, 15, 0.57); */
   text-align: right;
-  margin-top: 3.2%;
+  margin-top: 1%;
   margin-left: calc(50% - 8.5%);
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-direction: row;
   position: absolute;
   z-index: 2;
   text-align: left;
   opacity: 1;
+  animation: nav_bar_opacity 5s;
 }
 .nav-bar_text:hover + .button-number {
   opacity: 1;
@@ -316,23 +359,28 @@ h1 {
 }
 
 .button-number {
-  color: rgba(59, 9, 1, 0.697);
+  color: rgba(255, 255, 255, 0.697);
   background-color: transparent;
   border: 0px;
-  margin-bottom: 5px;
-  margin-right: 10px;
   cursor: pointer;
   font-family: "Send Flowers", cursive;
   font-size: 25px;
-  padding: 7px 0px 0px 0px;
   opacity: 0.5;
-  animation: number_down_to 7s;
+  margin: 38px 0 0 0;
+  animation: number_down_to 5s;
   /* font-family: 'Sunflower', sans-serif; */
   font-style: italic;
+  text-decoration: none;
 }
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.697);
+}
+
 .button-number:hover {
   transition: 1s;
   opacity: 1;
+  color: #ffffff;
 }
 .button-map {
   background-color: transparent;
@@ -340,7 +388,8 @@ h1 {
   margin-bottom: 0px;
   cursor: pointer;
   opacity: 0.3;
-  animation: number_down_to 7s;
+  animation: number_down_to 5s;
+  margin: 38px 0 0 0;
 }
 .button-map:hover {
   transition: 1s;
@@ -352,7 +401,8 @@ h1 {
   cursor: pointer;
   margin: 0px 0px 0px 0px;
   opacity: 0.3;
-  animation: number_down_to 7s;
+  animation: number_down_to 5s;
+  margin: 38px 0 0 0;
 }
 .button-products:hover {
   transition: 1s;
@@ -365,6 +415,24 @@ h1 {
 .button-products img {
   width: 36px;
   height: 36px;
+}
+.map_pop {
+  width: 750px;
+  height: 300px;
+  position: absolute;
+  right: 10px;
+  top: 0.5%;
+  z-index: 4;
+  opacity: 0.8;
+  animation: right_to_left 3s forwards;
+  display: none;
+}
+.map_pop:hover {
+  transform: translateX(50px);
+}
+.map_pop:hover {
+  opacity: 1;
+  transform: translateX(10px) translateY(10px);
 }
 .pop {
   background-color: #ffffff;
@@ -380,7 +448,7 @@ h1 {
 }
 .pop-grid {
   height: 100%;
-  width: 95%;
+  width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -557,6 +625,14 @@ h1 {
   top: 0px;
 }
 @media (max-width: 420px) {
+  .main {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    position: absolute;
+    z-index: 1;
+  }
   .grid-body {
     height: 250vh;
     width: 100vw;
@@ -601,12 +677,12 @@ h1 {
     margin-top: 0px;
     z-index: 3;
   }
-  
+
   .grid-items6 img {
     width: 100%;
     height: 100%;
     animation: up_to 5s;
-    border-left: solid  rgba(59, 9, 1, 0.697) 5px;
+    border-left: solid rgba(59, 9, 1, 0.697) 5px;
     border-right: solid rgba(59, 9, 1, 0.697) 5px;
   }
 
@@ -615,28 +691,28 @@ h1 {
     width: 100%;
     height: 100%;
     animation: down_to 5s;
-    border-left: solid  rgba(59, 9, 1, 0.697) 5px;
+    border-left: solid rgba(59, 9, 1, 0.697) 5px;
     border-right: solid rgba(59, 9, 1, 0.697) 5px;
   }
   .grid-items10 img {
     width: 100%;
     height: 100%;
     animation: down_to 5s;
-    border-left: solid  rgba(59, 9, 1, 0.697) 5px;
+    border-left: solid rgba(59, 9, 1, 0.697) 5px;
     border-right: solid rgba(59, 9, 1, 0.697) 5px;
   }
   .grid-items11 img {
     width: 100%;
     height: 100.5%;
     animation: up_to 5s;
-    border-left: solid  rgba(59, 9, 1, 0.697) 5px;
+    border-left: solid rgba(59, 9, 1, 0.697) 5px;
     border-right: solid rgba(59, 9, 1, 0.697) 5px;
   }
   .grid-items12 img {
     width: 100%;
     height: 100%;
     animation: up_to 5s;
-    border-left: solid  rgba(59, 9, 1, 0.697) 5px;
+    border-left: solid rgba(59, 9, 1, 0.697) 5px;
     border-right: solid rgba(59, 9, 1, 0.697) 5px;
     border-bottom: solid rgba(59, 9, 1, 0.697) 5px;
   }
@@ -665,8 +741,8 @@ h1 {
   .nav-bar {
     width: 100vw;
     height: 80px;
-    background-color: rgb(130, 130, 130);
-    border-left: solid  rgba(59, 9, 1, 0.697) 5px;
+  background: rgba(59, 9, 1, 0.697);
+    border-left: solid rgba(59, 9, 1, 0.697) 5px;
     border-right: solid rgba(59, 9, 1, 0.697) 5px;
     text-align: right;
     margin-top: 0px;
@@ -679,42 +755,42 @@ h1 {
     text-align: left;
     opacity: 1;
     animation: navbar_left_to_right 3s;
+    margin-right: 50px;
   }
-  
+
   .nav-bar_text {
-    width: 70%;
+    width: 100px;
     height: 50px;
     /* border: solid 3px rgba(15, 15, 15, 0.57); */
-    color: rgba(59, 9, 1, 0.697);
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 100;
     /* opacity: 0.2; */
     animation: up_to 5s;
     cursor: pointer;
     position: absolute;
-    left: 7px;
-    top: 15px;
+    display: block;
+    margin: 0px;
+    left: 15px;
+    top:-10px;
     z-index: 1;
+    animation: left_to_right_text 5s;
   }
   .nav-bar_text:hover + .button-number {
     opacity: 1;
     transition: 1s;
   }
-  
+
   .button-number {
-    color: rgba(59, 9, 1, 0.697);
     background-color: transparent;
     border: 0px;
-    margin-top: 40px;
-    margin-right: 120px;
     cursor: pointer;
     font-family: "Send Flowers", cursive;
-    font-size: 25px;
-    padding: 7px 0px 0px 0px;
+    font-size: 22=px;
     opacity: 1;
-    animation:navbar_left_to_right 5s;
+    animation: navbar_left_to_right 5s;
     /* font-family: 'Sunflower', sans-serif; */
     font-style: italic;
+    margin-right: 7px;
   }
   .button-number:hover {
     transition: 1s;
@@ -723,7 +799,6 @@ h1 {
   .button-map {
     background-color: transparent;
     border: 0px;
-    margin-bottom: 0px;
     cursor: pointer;
     opacity: 1;
     animation: navbar_left_to_right 5s;
@@ -736,13 +811,16 @@ h1 {
     background-color: transparent;
     border: 0px;
     cursor: pointer;
-    margin: 0px 0px 0px 0px;
     opacity: 0.9;
+    display: block;
     animation: navbar_left_to_right 5s;
   }
   .button-products:hover {
     transition: 1s;
     opacity: 1;
   }
-  
+  .button-map img, .button-products img {
+    width: 30px;
+    height: 30px;
+  }
 }
