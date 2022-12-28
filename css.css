@@ -304,7 +304,7 @@ h1 {
 }
 .grid-items11 img {
   width: 100%;
-  height: 100%;
+  height: 100.2%;
   animation: up_to 5s;
 }
 .grid-items12 img {
@@ -320,24 +320,28 @@ h1 {
 .nav-bar_text {
   width: 19%;
   min-width: 365px;
-  height: 50px;
+  height: 70px;
   color: rgba(255, 255, 255, 0.697);
   /* border: solid 3px rgba(15, 15, 15, 0.57); */
   display: flex;
   justify-content: center;
   flex-direction: row;
-  margin-top: 15px;
-  margin-top: 1%;
+  /* margin-top: 15px; */
+  /* margin-top: 1%; */
   margin-left: calc(50% - 8.5%);
   position: absolute;
+  top: 0px;
   z-index: 3;
   font-size: 70px;
   font-weight: 100px;
   animation: up_to 5s;
   cursor: pointer;
+  opacity: 0.8;
+  padding: 0px;
 }
 .nav-bar {
   background: rgba(59, 9, 1, 0.697);
+  height: 70px;
   min-width: 365px;
   width: 19%;
   height: 150px;
@@ -346,7 +350,7 @@ h1 {
   margin-top: 1%;
   margin-left: calc(50% - 8.5%);
   display: flex;
-  justify-content: space-around;
+  justify-content: end;
   align-items: center;
   flex-direction: row;
   position: absolute;
@@ -355,7 +359,12 @@ h1 {
   opacity: 1;
   animation: nav_bar_opacity 5s;
 }
-.nav-bar_text:hover + .button-number {
+.nav-bar_text:hover{
+  opacity: 1;
+  transition: 1s;
+  text-shadow: white 0px 0px 4px;
+}
+.nav-bar_text:hover + .button-number{
   opacity: 1;
   transition: 1s;
 }
@@ -368,7 +377,7 @@ h1 {
   font-family: "Send Flowers", cursive;
   font-size: 25px;
   opacity: 0.5;
-  margin: 38px 0 0 0;
+  margin: 38px 5px 0 0;
   animation: number_down_to 5s;
   /* font-family: 'Sunflower', sans-serif; */
   font-style: italic;
@@ -383,6 +392,8 @@ a {
   transition: 1s;
   opacity: 1;
   color: #ffffff;
+  text-shadow: white 0px 0px 4px;
+
 }
 .button-map {
   background-color: transparent;
@@ -398,6 +409,8 @@ a {
   opacity: 1;
 }
 .button-products {
+  width: fit-content;
+  height: fit-content;
   background-color: transparent;
   border: 0px;
   cursor: pointer;
@@ -422,19 +435,17 @@ a {
   width: 750px;
   height: 300px;
   position: absolute;
-  right: 10px;
+  right: 5px;
   top: 0.5%;
   z-index: 4;
   opacity: 0.8;
   animation: right_to_left 3s forwards;
   display: none;
 }
-.map_pop:hover {
-  transform: translateX(50px);
-}
+
 .map_pop:hover {
   opacity: 1;
-  transform: translateX(10px) translateY(10px);
+  transform: translateX(5px);
 }
 .pop {
   background-color: #ffffff;
@@ -742,7 +753,8 @@ a {
 
   .nav-bar {
     width: 107.5vw;
-    height: 80px;
+   height: 70px;
+    ;
   background: rgba(59, 9, 1, 0.697);
     /* border-left: solid rgba(59, 9, 1, 0.697) 5px;
     border-right: solid rgba(59, 9, 1, 0.697) 5px; */
