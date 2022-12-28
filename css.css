@@ -68,7 +68,7 @@ h1 {
   0% {
     transform: translateX(-1000%);
   }
-  50% {
+  50% { 
   }
   100% {
     transform: translateX(0%);
@@ -110,10 +110,12 @@ h1 {
 }
 @keyframes left_to_right_text {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(-50%); opacity: 0;
+  }
+  50% { opacity: 0;
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(0%); opacity: 1;
   }
 }
 .paralax {
@@ -627,9 +629,9 @@ a {
 @media (max-width: 420px) {
   .main {
     display: block;
-    width: 100vw;
+    width: fit-content;
     height: 100vh;
-    overflow: auto;
+    overflow: scroll;
     position: absolute;
     z-index: 1;
   }
@@ -638,15 +640,15 @@ a {
     width: 100vw;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 30% 30% 30% 30% 30%;
+    grid-template-rows: 40% 40% 40% 40% 40%;
     grid-template-areas:
       "items6 items6 items6 items6 items6 "
       "items9 items9 items9 items9 items9"
       "items10 items10 items10 items10 items10"
       "items11 items11 items11 items11 items11"
       "items12 items12 items12 items12 items12";
-    gap: 0px;
-    margin: 0px;
+    gap: 5px;
+    margin: 0px 0px 0px 0px;
     z-index: 1;
   }
 
@@ -739,11 +741,11 @@ a {
   }
 
   .nav-bar {
-    width: 100vw;
+    width: 107.5vw;
     height: 80px;
   background: rgba(59, 9, 1, 0.697);
-    border-left: solid rgba(59, 9, 1, 0.697) 5px;
-    border-right: solid rgba(59, 9, 1, 0.697) 5px;
+    /* border-left: solid rgba(59, 9, 1, 0.697) 5px;
+    border-right: solid rgba(59, 9, 1, 0.697) 5px; */
     text-align: right;
     margin-top: 0px;
     margin-left: 0px;
@@ -755,7 +757,8 @@ a {
     text-align: left;
     opacity: 1;
     animation: navbar_left_to_right 3s;
-    margin-right: 50px;
+    margin: 0px 0px 0px 0px;
+
   }
 
   .nav-bar_text {
@@ -790,7 +793,7 @@ a {
     animation: navbar_left_to_right 5s;
     /* font-family: 'Sunflower', sans-serif; */
     font-style: italic;
-    margin-right: 7px;
+    margin-right: 30px;
   }
   .button-number:hover {
     transition: 1s;
