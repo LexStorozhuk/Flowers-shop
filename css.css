@@ -762,8 +762,7 @@ a {
 
   .nav-bar {
     width: 107.5vw;
-   height: 70px;
-    ;
+   height: 87px;
   background: rgba(59, 9, 1, 0.697);
     /* border-left: solid rgba(59, 9, 1, 0.697) 5px;
     border-right: solid rgba(59, 9, 1, 0.697) 5px; */
@@ -794,7 +793,7 @@ a {
     position: absolute;
     display: block;
     margin: 0px;
-    left: 15px;
+    left: 35px;
     top:-10px;
     z-index: 1;
     animation: left_to_right_text 5s;
@@ -809,12 +808,12 @@ a {
     border: 0px;
     cursor: pointer;
     font-family: "Send Flowers", cursive;
-    font-size: 22=px;
+    font-size: 22px;
     opacity: 1;
     animation: navbar_left_to_right 5s;
     /* font-family: 'Sunflower', sans-serif; */
     font-style: italic;
-    margin-right: 30px;
+    margin-right: 35px;
   }
   .button-number:hover {
     transition: 1s;
@@ -852,7 +851,7 @@ a {
     height: 100%;
     position: absolute;
     right: 0px;
-    top: 71px;
+    top: 85px;
     z-index: 4;
     opacity: 1;
     animation: right_to_left 3s forwards;
