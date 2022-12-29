@@ -651,7 +651,7 @@ a {
     display: block;
     width: fit-content;
     height: 100vh;
-    overflow-wrap: ;
+    overflow-y: scroll;
     position: absolute;
     z-index: 1;
   }
